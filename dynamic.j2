@@ -7,7 +7,9 @@
     <h1>Server Information</h1>
     <div id="info">
         <p><strong>Operating System:</strong> {{ ansible_distribution }}</p>
+        <p><strong>Memory:</strong> {{ ansible_memtotal_mb }}</p>
         <p><strong>Hostname:</strong> {{ ansible_hostname}}</p>
+        <p><strong>Architecture:</strong> {{ ansible_architecture }}</p>
     </div>
 </body>
 </html>

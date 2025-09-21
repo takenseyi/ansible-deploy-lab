@@ -1,0 +1,14 @@
+---
+- name: Web variables
+  hosts: g1
+  become: yes
+  variables:
+    Deployment Environment: Production
+    Application Version: v2.3.1
+
+  tasks:
+    - name: update dynamic page
+      template:
+        src: dynamic.j2
+        dest:   /var/www/html/dynamic.html   
+...
