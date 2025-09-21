@@ -1,0 +1,11 @@
+---
+- name: Web dynamic page
+  hosts: g1
+  become: yes
+
+  tasks:
+    - name: update dynamic page
+      copy:
+        src: dynamic-page.html
+        dest:   /var/www/html/dynamic.html  
+...
