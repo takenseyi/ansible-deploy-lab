@@ -1,9 +1,10 @@
 ---
-- name: Deploy Web App
+- name: Deploy php App
   hosts: n4
   become: yes
 
   roles:
     - httpd
-    - web
+    - php
+ 
 ...
