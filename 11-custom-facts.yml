@@ -3,8 +3,8 @@
   hosts: g1
   become: yes
   variables:
-    Deployment Environment: Production
-    Application Version: v2.3.1
+    env: Production
+    app_Version: v2.3.1
 
   tasks:
     - name: update dynamic page
