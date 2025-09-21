@@ -1,0 +1,38 @@
+---
+---
+    - name: Install HTTPD on RedHat family (Amazon, CentOS, RHEL)
+      yum:
+        name: httpd
+        state: present   
+      when: ansible_os_family == "RedHat"
+
+    - name: start httpd on RedHat family
+      service:
+        name: httpd
+        state: started    
+      when: ansible_os_family == "RedHat"
+
+    - name: Enable httpd on RedHat family
+      service:
+        name: httpd
+        enabled: yes  
+      when: ansible_os_family == "RedHat"  
+
+    - name: Install Apache2 on Debian family (Ubuntu, Debian)
+      apt:
+        name: apache2
+        state: present   
+      when: ansible_os_family == "Debian"
+
+    - name: start apache2 on Debian family (Ubuntu, Debian)
+      service:
+        name: Apache2
+        state: started    
+      when: ansible_os_family == "Debian"
+
+    - name: Enable Apache2 on Debian family (Ubuntu, Debian)
+      service:
+        name: apache2
+        enabled: yes  
+      when: ansible_os_family == "Debian"
+...

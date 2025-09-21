@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Server Info</title>
+</head>
+<body>
+    <h1>Server Information</h1>
+    <div id="info">
+        <p><strong>Operating System:</strong> {{ ansible_distribution }}</p>
+        <p><strong>Memory:</strong> {{ ansible_memtotal_mb }}</p>
+        <p><strong>Hostname:</strong> {{ ansible_hostname}}</p>
+        <p><strong>Architecture:</strong> {{ ansible_architecture }}</p>
+        <p><strong>Deployment Environment:</strong> {{ env }}</p>
+        <p><strong>Application Version:</strong> {{ app_Version }}</p>
+    </div>
+</body>
+</html>

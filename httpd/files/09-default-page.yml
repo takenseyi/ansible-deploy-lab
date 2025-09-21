@@ -1,0 +1,11 @@
+---
+- name: Web default page
+  hosts: g1
+  become: yes
+
+  tasks:
+    - name: update default page
+      copy:
+        src: default-page.html
+        dest:   /var/www/html/default.html  
+...
