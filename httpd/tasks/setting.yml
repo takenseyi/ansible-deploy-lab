@@ -8,4 +8,9 @@
       template:
         src: dynamic.j2
         dest:   /var/www/html/dynamic.html  
+
+    - name: update maintenance page
+      copy:
+        src: maintenance.html
+        dest:   /var/www/html/index.html 
 ...
